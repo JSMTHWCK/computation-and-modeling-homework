@@ -30,7 +30,7 @@ def is_prime(n):
 		if n % numbers == 0:
 			return False
 			
-		else:
+		elif n == numbers + 1:
 			return True	
 
 
