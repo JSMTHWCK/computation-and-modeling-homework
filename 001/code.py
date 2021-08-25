@@ -33,4 +33,10 @@ def is_prime(n):
 		elif n == numbers + 1:
 			return True	
 
-
+#code
+def getintersection(list1, list2):
+	intersectlist = []
+	for item in list1:
+		if item in list2:
+			intersectlist.append(item)
+	return intersectlist
