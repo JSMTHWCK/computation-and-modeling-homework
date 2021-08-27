@@ -50,7 +50,7 @@ def get_union(list1, list2):
 		return unionlist
 
 
-#def
+#code
 def count_characters(input_string):
 	dictionary = {}
 	input_string_lower = input_string.lower()
@@ -60,4 +60,24 @@ def count_characters(input_string):
 		else:
 			dictionary[letter] += 1
 	return dictionary
+
+#code
+
+#def get_first_n_terms_nonrecursive(n):
+	#will do later
+
+
+#def get_first_n_terms_recursive(n):
+	#will do later
+
+def convert_to_base_ten(n):
+	number = len(str(n)) - 1
+	finnum = 0
+	for binary in str(n):
+		if binary == "0":
+			finnum += 0
+		else:
+			finnum += 2**number
+		number -= 1
+	return finnum
 

@@ -4,7 +4,7 @@ from code import is_prime
 from code import get_intersection
 from code import get_union
 from code import count_characters
-
+from code import convert_to_base_ten
 print(check_for_symmetry("tacocat"))
 print(check_for_symmetry("pinapple"))
 print(check_for_symmetry("kayak"))
@@ -40,3 +40,9 @@ print(count_characters("pinapple"))
 print(count_characters("kayak"))
 print(count_characters("potato"))
 print(count_characters("symmetry"))
+
+print(convert_to_base_ten("01011110"))
+print(convert_to_base_ten("00100100"))
+print(convert_to_base_ten("11100011"))
+print(convert_to_base_ten("10011111"))
+print(convert_to_base_ten("10000111"))
