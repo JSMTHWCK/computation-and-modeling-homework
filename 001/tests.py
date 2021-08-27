@@ -3,6 +3,7 @@ from code import convert_to_numbers
 from code import is_prime
 from code import get_intersection
 from code import get_union
+from code import count_characters
 
 print(check_for_symmetry("tacocat"))
 print(check_for_symmetry("pinapple"))
@@ -33,3 +34,9 @@ print(get_union([78,83,21,99],[43,16,45,58]))
 print(get_union([66,63,96,25],[63,14,84,69]))
 print(get_union([84,78,99,69],[21,25,69,81]))
 print(get_union([42,61,42,17],[33,83,20,28]))
+
+print(count_characters("tacocat"))
+print(count_characters("pinapple"))
+print(count_characters("kayak"))
+print(count_characters("potato"))
+print(count_characters("symmetry"))

@@ -48,4 +48,16 @@ def get_union(list1, list2):
 			if term not in unionlist:
 				unionlist.append(term)
 		return unionlist
-		
+
+
+#def
+def count_characters(input_string):
+	dictionary = {}
+	input_string_lower = input_string.lower()
+	for letter in input_string_lower:
+		if letter not in dictionary:
+			dictionary[letter] = 1
+		else:
+			dictionary[letter] += 1
+	return dictionary
+
