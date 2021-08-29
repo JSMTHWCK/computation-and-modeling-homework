@@ -65,11 +65,23 @@ def count_characters(input_string):
 	return dictionary
 
 #code
-#def get_first_n_terms_nonrecursive(n):
+def get_first_n_terms_nonrecursive(n):
+    terms = []
+
+    for i in range(1, n+1):
+
+        if i == 1:
+            newnum = 5
+            terms.append(newnum)
+
+        else:
+            newnum = 3 * (terms[i-2]) - 4
+            terms.append(newnum)
+
+    return terms
 
 
-
-def get_first_n_terms_recursive(n):
+def get_nth_term_recursive(n):
 	if n == 0:
 		return "please choose an integer greater than 0"
 	 
@@ -77,7 +89,8 @@ def get_first_n_terms_recursive(n):
 		return 5
 
 	else:
-		return 3 * get_nth_term_recursive(n-1) - 4
+		#this should? be right
+		return 3*get_nth_term_recursive(n-1) -4
 
 
 
@@ -109,6 +122,4 @@ def convert_to_base_2(n):
 			result += "0"
 			highestexponent = highestexponent - 1
 	return result
-
-print(convert_to_base_2(19))
 
