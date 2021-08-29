@@ -4,7 +4,11 @@ from code import is_prime
 from code import get_intersection
 from code import get_union
 from code import count_characters
-from code import convert_to_base_ten
+from code import get_first_n_terms_nonrecursive
+from code import get_first_n_terms_recursive
+from code import convert_to_base_10
+
+
 print(check_for_symmetry("tacocat"))
 print(check_for_symmetry("pinapple"))
 print(check_for_symmetry("kayak"))
@@ -40,9 +44,23 @@ print(count_characters("pinapple"))
 print(count_characters("kayak"))
 print(count_characters("potato"))
 print(count_characters("symmetry"))
+#need to figure out what's wrong
+'''
+print(get_first_n_terms_nonrecursive("1"))
+print(get_first_n_terms_nonrecursive("2"))
+print(get_first_n_terms_nonrecursive("3"))
+print(get_first_n_terms_nonrecursive("4"))
+print(get_first_n_terms_nonrecursive("5"))
 
-print(convert_to_base_ten("01011110"))
-print(convert_to_base_ten("00100100"))
-print(convert_to_base_ten("11100011"))
-print(convert_to_base_ten("10011111"))
-print(convert_to_base_ten("10000111"))
+print(get_first_n_terms_recursive(1))
+print(get_first_n_terms_recursive(2))
+print(get_first_n_terms_recursive(3))
+print(get_first_n_terms_recursive(4))
+print(get_first_n_terms_recursive(5))
+'''
+print(convert_to_base_10("01011110"))
+print(convert_to_base_10("00100100"))
+print(convert_to_base_10("11100011"))
+print(convert_to_base_10("10011111"))
+print(convert_to_base_10("10000111"))
+

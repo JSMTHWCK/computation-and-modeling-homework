@@ -1,3 +1,6 @@
+import math
+
+
 #code
 def sum_of_first_n_numbers(n):
 	sum = 0
@@ -62,15 +65,23 @@ def count_characters(input_string):
 	return dictionary
 
 #code
-
 #def get_first_n_terms_nonrecursive(n):
-	#will do later
 
 
-#def get_first_n_terms_recursive(n):
-	#will do later
 
-def convert_to_base_ten(n):
+def get_first_n_terms_recursive(n):
+	if n == 0:
+		return "please choose an integer greater than 0"
+	 
+	if n == 1:
+		return 5
+
+	else:
+		return 3 * get_nth_term_recursive(n-1) - 4
+
+
+
+def convert_to_base_10(n):
 	number = len(str(n)) - 1
 	finnum = 0
 	for binary in str(n):
@@ -80,4 +91,24 @@ def convert_to_base_ten(n):
 			finnum += 2**number
 		number -= 1
 	return finnum
+
+#code
+def convert_to_base_2(n):
+	#seperating functions because that somehow fixes thing
+	logn = math.log2(n)
+	highestexponent = math.floor(logn)
+	#empty string to add numbers
+	result = ''
+	while n> 0:
+		if n-2**highestexponent >= 0:
+			result += "1"
+			n = n - 2**highestexponent
+			highestexponent = highestexponent - 1
+			
+		else:
+			result += "0"
+			highestexponent = highestexponent - 1
+	return result
+
+print(convert_to_base_2(19))
 
