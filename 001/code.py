@@ -107,19 +107,16 @@ def convert_to_base_10(n):
 
 #code
 def convert_to_base_2(n):
-	#seperating functions because that somehow fixes thing
-	logn = math.log2(n)
-	highestexponent = math.floor(logn)
-	#empty string to add numbers
-	result = ''
-	while n> 0:
-		if n-2**highestexponent >= 0:
-			result += "1"
-			n = n - 2**highestexponent
-			highestexponent = highestexponent - 1
-			
-		else:
-			result += "0"
-			highestexponent = highestexponent - 1
-	return result
+    exponent_list = []
+    output = 0
 
+    while n > 0:
+        n_log_base_2 = math.log(n, 2)
+        rounded_log = math.floor(n_log_base_2)
+        n = n - 2**rounded_log
+        exponent_list.append(rounded_log)
+
+    for exponent in exponent_list:
+        output += 10**exponent
+
+    return(output)
