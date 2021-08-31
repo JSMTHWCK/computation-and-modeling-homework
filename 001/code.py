@@ -38,11 +38,11 @@ def is_prime(n):
 
 #code
 def get_intersection(list1, list2):
-	intersectlist = []
+	intersect_list = []
 	for item in list1:
 		if item in list2:
-			intersectlist.append(item)
-	return intersectlist
+			intersect_list.append(item)
+	return intersect_list
 
 #code
 def get_union(list1, list2):

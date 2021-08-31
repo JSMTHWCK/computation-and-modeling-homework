@@ -66,10 +66,7 @@ if convert_to_base_10("01011110") != 94:
 if convert_to_base_10("00100100") != 36:
 	print('convert_to_base_10 failed on input "00100100"')
 
-if convert_to_base_2(12) != 11:
+if convert_to_base_2(12) != 1100:
 	print('convert_to_base_2 failed on input "12"')
-if convert_to_base_2(48) != 101101:
+if convert_to_base_2(48) != 110000:
 	print('convert_to_base_2 failed on input "48"')
-print(convert_to_base_2(12))
-print(convert_to_base_2(48))
-
