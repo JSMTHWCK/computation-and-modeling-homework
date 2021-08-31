@@ -9,63 +9,67 @@ from code import get_nth_term_recursive
 from code import convert_to_base_10
 from code import convert_to_base_2
 
-print(check_for_symmetry("tacocat"))
-print(check_for_symmetry("pinapple"))
-print(check_for_symmetry("kayak"))
-print(check_for_symmetry("potato"))
-print(check_for_symmetry("symmetry"))
 
-print(convert_to_numbers("tacocat"))
-print(convert_to_numbers("pinapple"))
-print(convert_to_numbers("kayak"))
-print(convert_to_numbers("potato"))
-print(convert_to_numbers("symmetry"))
+if check_for_symmetry('tacocat') != True:
+  print('check_for_symmetry failed on input "tacocat"')
+if check_for_symmetry('pinapple') != False:
+	print('check_for_symmetry failed on input "pinapple"')
 
-print(is_prime(20))
-print(is_prime(16))
-print(is_prime(86))
-print(is_prime(25))
-print(is_prime(37))
+if convert_to_numbers('tacocat') != [20,1,3,15,3,1,20]:
+	print('convert_to_numbers failed on input "tacocat"')
 
-print(get_intersection([1,3,5,7,8],[2,4,6,8,7]))
-print(get_intersection([78,83,21,99],[43,16,45,58]))
-print(get_intersection([66,63,96,25],[63,14,84,69]))
-print(get_intersection([84,78,99,69],[21,25,69,81]))
-print(get_intersection([42,61,42,17],[33,83,20,28]))
 
-print(get_union([1,3,5,7,8],[2,4,6,8,7]))
-print(get_union([78,83,21,99],[43,16,45,58]))
-print(get_union([66,63,96,25],[63,14,84,69]))
-print(get_union([84,78,99,69],[21,25,69,81]))
-print(get_union([42,61,42,17],[33,83,20,28]))
+if convert_to_numbers('pinapple') != [16,9,14,1,16,16,12,5]:
+	print('convert_to_numbers failed on input "pinapple"')
 
-print(count_characters("tacocat"))
-print(count_characters("pinapple"))
-print(count_characters("kayak"))
-print(count_characters("potato"))
-print(count_characters("symmetry"))
-#need to figure out what's wrong
+if is_prime(20) != False:
+	print('is_prime failed on input "20"')
 
-print(get_first_n_terms_nonrecursive(1))
-print(get_first_n_terms_nonrecursive(2))
-print(get_first_n_terms_nonrecursive(3))
-print(get_first_n_terms_nonrecursive(4))
-print(get_first_n_terms_nonrecursive(5))
 
-print(get_nth_term_recursive(1))
-print(get_nth_term_recursive(2))
-print(get_nth_term_recursive(3))
-print(get_nth_term_recursive(4))
-print(get_nth_term_recursive(5))
+if is_prime(86) != False:
+	print('is_prime failed on input "86"')
 
-print(convert_to_base_10("01011110"))
-print(convert_to_base_10("00100100"))
-print(convert_to_base_10("11100011"))
-print(convert_to_base_10("10011111"))
-print(convert_to_base_10("10000111"))
+if get_intersection([1,3,5,7,8],[2,4,6,8,7]) !=  [7,8]:
+	print('get_intersection failed on input "[1,3,5,7,8],[2,4,6,8,7]"')
 
+if get_intersection([78,83,21,99],[43,16,45,58]) !=  []:
+	print('get_intersection failed on input "[78,83,21,99],[43,16,45,58]"')
+
+if get_union([1,3,5,7,8],[2,4,6,8,7]) != [1,3,5,7,8,2,4,6]:
+	print('get_union failed on input "[1,3,5,7,8],[2,4,6,8,7]"')
+
+if get_union([78,83,21,99],[43,16,45,58]) != [78,83,21,99,43,16,45,58]:
+	print('get_union failed on input "[78,83,21,99],[43,16,45,58]"')
+
+if count_characters("tacocat") != {'t': 2, 'a': 2, 'c': 2, 'o': 1}:
+	print('count_characters failed on input "tacocat"')
+
+
+if count_characters("pinapple") != {'p': 3, 'i': 1, 'n': 1, 'a': 1, 'l': 1, 'e':1}:
+	print('count_characters failed on input "pinapple"')
+
+if get_first_n_terms_nonrecursive(3) !=[5,11,29]:
+	print('get_first_n_terms_nonrecursive failed on input "3"')
+
+if get_first_n_terms_nonrecursive(5) !=[5,11,29,83,245]:
+	print('get_first_n_terms_nonrecursive failed on input "5"')
+
+if get_nth_term_recursive(3) != 29:
+	print('get_nth_term_recursive failed on input 3')
+
+if get_nth_term_recursive(5) !=245:
+	print('get_nth_term_recursive failed on input 5')
+
+if convert_to_base_10("01011110") != 94:
+	print('convert_to_base_10 failed on input "01011110"')
+
+if convert_to_base_10("00100100") != 36:
+	print('convert_to_base_10 failed on input "00100100"')
+
+if convert_to_base_2(12) != 11:
+	print('convert_to_base_2 failed on input "12"')
+if convert_to_base_2(48) != 101101:
+	print('convert_to_base_2 failed on input "48"')
 print(convert_to_base_2(12))
 print(convert_to_base_2(48))
-print(convert_to_base_2(45))
-print(convert_to_base_2(7))
-print(convert_to_base_2(38))
+
