@@ -1,13 +1,4 @@
-from code import check_for_symmetry
-from code import convert_to_numbers
-from code import is_prime
-from code import get_intersection
-from code import get_union
-from code import count_characters
-from code import get_first_n_terms_nonrecursive
-from code import get_nth_term_recursive
-from code import convert_to_base_10
-from code import convert_to_base_2
+from code import *
 
 
 if check_for_symmetry('tacocat') != True:
