@@ -64,10 +64,31 @@ class stacks:
 		return x
 n1 = stacks([1,2,3,4,5,6])
 
-#class queue:
-#	def __init__(self,numbers):
-#		self.numbers = numbers
+class queue:
+	def __init__(self,numbers):
+		self.numbers = numbers
+		
+	def print(self):
+		numbers_reversed = self.numbers[::-1]
+		print(*numbers_reversed, sep = ' ')
+
+	def enqueue(self,new_number):
+		self.numbers.append(new_number)
+		return self.numbers
+
+	def dequeue(self):
+		x = self.numbers[-1]
+		self.numbers = self.numbers[0:len(self.numbers)-1]
+		print("new array is " + str(self.numbers))
+		return x
+n2 = queue([1,2,3,4,5,6])
+
 n1.print()
 print(n1.push(8))
 #it's popping out the 8 from last question
 print(n1.pop())
+
+n2.print()
+print(n2.enqueue(8))
+#it's popping out the 8 from last question
+print(n2.dequeue())
