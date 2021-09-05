@@ -42,4 +42,32 @@ def bisection_search(number,power,precision):
 			return ((lower + upper)/2)
 	return ((lower + upper)/2)
 
-print(bisection_search(2,2,5))
+
+
+class stacks:
+	def __init__(self,numbers):
+		self.numbers = numbers
+
+	
+	def print(self):
+		numbers_reversed = self.numbers[::-1]
+		print(*numbers_reversed, sep = ' ')
+
+	def push(self,new_number):
+		self.numbers.append(new_number)
+		return self.numbers
+
+	def pop(self):
+		x = self.numbers[-1]
+		self.numbers = self.numbers[0:len(self.numbers)-1]
+		print("new array is " + str(self.numbers))
+		return x
+n1 = stacks([1,2,3,4,5,6])
+
+#class queue:
+#	def __init__(self,numbers):
+#		self.numbers = numbers
+n1.print()
+print(n1.push(8))
+#it's popping out the 8 from last question
+print(n1.pop())
