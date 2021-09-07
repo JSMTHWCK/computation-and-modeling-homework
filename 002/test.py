@@ -14,3 +14,20 @@ if math.isclose(math.sqrt(3), bisection_search(3,2,5), abs_tol = 0.00001) != Tru
 	print('bisection_search failed on input "3**1/2"')
 if math.isclose(10**(1./3.), bisection_search(10,3,9), abs_tol = 0.5) != True:
 	print('bisection_search failed on input "10**1/3"')
+
+n1 = stacks([1,2,3,4,5,6])
+if n1.print() != "654321":
+	print("stack print failed on n1")
+if n1.push(8) != [1,2,3,4,5,6,8]:
+	print("stack push failed on n1")
+if n1.pop() != 8:
+	print("stack pop failed on n1")
+	
+n2 = queue([1,2,3,4,5,6])
+if n2.print() != "654321":
+	print("stack print failed on n1")
+if n2.enqueue(8) != [1,2,3,4,5,6,8]:
+	print("stack push failed on n1")
+if n2.dequeue() != 8:
+	print("stack pop failed on n1")
+	

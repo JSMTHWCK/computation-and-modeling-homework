@@ -70,8 +70,12 @@ class stacks:
 
 	
 	def print(self):
+		final = ''
 		numbers_reversed = self.numbers[::-1]
-		print(*numbers_reversed, sep = ' ')
+		for item in numbers_reversed:
+			final += str(item)
+		return final
+
 
 	def push(self,new_number):
 		self.numbers.append(new_number)
@@ -82,15 +86,17 @@ class stacks:
 		self.numbers = self.numbers[0:len(self.numbers)-1]
 		print("new array is " + str(self.numbers))
 		return x
-n1 = stacks([1,2,3,4,5,6])
 
 class queue:
 	def __init__(self,numbers):
 		self.numbers = numbers
 		
 	def print(self):
+		final = ''
 		numbers_reversed = self.numbers[::-1]
-		print(*numbers_reversed, sep = ' ')
+		for item in numbers_reversed:
+			final += str(item)
+		return final
 
 	def enqueue(self,new_number):
 		self.numbers.append(new_number)
