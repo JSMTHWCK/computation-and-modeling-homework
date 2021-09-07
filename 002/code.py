@@ -112,4 +112,12 @@ def calc_minimum(numbers):
 			a = item
 	return a
 
+
+def simple_sort(numbers):
+	fin_list = []
+	while len(numbers) != 0:
+		fin_list.append(calc_minimum(numbers))
+		numbers.remove(calc_minimum(numbers))
+	return fin_list
 print(calc_minimum([7,3,6,1,8]))
+print(simple_sort([7,3,6,1,8]))
