@@ -22,13 +22,33 @@ def decode(numbers,a,b):
 	return result
 
 #unoptimized
-'''
 def bruteforce(numbers):
-	for a in range(1,101):
-		for b in range (1,101):
-			for nums in numbers:
-				
-'''
+	alphabet_w_cap = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	for a in range(1, 100):
+
+		for b in range(1, 100):
+			decoded_string = ''
+			fin_answer = []
+			x = 0
+			for item in numbers:
+				decoded_number = (item - b)/a
+				if decoded_number.is_integer() == True and decoded_number >= 0 and decoded_number <=52:
+					fin_answer.append(decoded_number)
+					x +=1
+					if x == len(numbers):
+						for letter in fin_answer:
+							decoded_string += ' ' + str(int(letter))
+							print(b)
+							print(a)
+						return decoded_string
+						break
+				else:
+					x = 0
+					fin_answer = []
+
+	
+
+print(bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751]))
 
 def bisection_search(number,power,precision):
 	lower = 0
