@@ -17,6 +17,8 @@ def decode(numbers,a,b):
 
 	for encoded in numbers :
 		decoded_number = (encoded - b)/a
+		if decoded_number.is_integer() == False or decoded_number < 0:
+			return "error, values are incorrect"
 		decoded_letter = alphabet[int(decoded_number)]
 		result += decoded_letter
 	return result

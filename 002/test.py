@@ -6,12 +6,11 @@ if decode(encode("pinapple",6,10),6,10) != "pinapple":
 	print('encode failed on input "pinapple"')
 
 if decode([4,1,8,9],1,2) != [2,1,8,9]: #4,1,8,9 doesn't translate to anything
-	print('decode failed on input "[4,1,8,9]"')
+	print('decode or encode failed on input "[4,1,8,9]"')
 if encode(decode([6,5,4,3,2],8,2),8,2) != [6,5,4,3,2]:
-	print('decode failed on input "[6,5,4,3,2]"')
+	print('decode or encode failed on input "[6,5,4,3,2]"')
 
-
-bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751]):
+bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751])
 
 
 
