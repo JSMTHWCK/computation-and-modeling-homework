@@ -103,12 +103,13 @@ class queue:
 		return x
 n2 = queue([1,2,3,4,5,6])
 
-n1.print()
-print(n1.push(8))
-#it's popping out the 8 from last question
-print(n1.pop())
 
-n2.print()
-print(n2.enqueue(8))
-#it's popping out the 8 from last question
-print(n2.dequeue())
+
+def calc_minimum(numbers):
+	a = numbers[0]
+	for item in numbers:
+		if item < a:
+			a = item
+	return a
+
+print(calc_minimum([7,3,6,1,8]))
