@@ -31,3 +31,12 @@ if n2.enqueue(8) != [1,2,3,4,5,6,8]:
 if n2.dequeue() != 8:
 	print("stack pop failed on n1")
 	
+if calc_minimum([1,2,3,4,5,6]) != 1:
+	print('calc_minimum failed on "[1,2,3,4,5,6]"')
+if calc_minimum([100,254,3,489,183]) != 3:
+	print('calc_minimum failed on "[100,254,3,489,183]"')
+
+if simple_sort([1,2,3,4,5,6]) != [1,2,3,4,5,6]:
+	print('simple_sort failed on "[1,2,3,4,5,6]"')
+if simple_sort([100,254,3,489,183]) != [3,100,183,254,489]:
+	print('simple_sort failed on "[100,254,3,489,183]"')
