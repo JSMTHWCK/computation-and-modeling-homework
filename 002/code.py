@@ -37,18 +37,16 @@ def bruteforce(numbers):
 					x +=1
 					if x == len(numbers):
 						for letter in fin_answer:
-							decoded_string += ' ' + str(int(letter))
-							print(b)
-							print(a)
-						return decoded_string
-						break
+							decoded_string += alphabet_w_cap[int(letter)]
+						return (decoded_string)
+						
 				else:
 					x = 0
 					fin_answer = []
 
 	
 
-print(bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751]))
+
 
 def bisection_search(number,power,precision):
 	lower = 0
