@@ -2,7 +2,7 @@ from code import *
 
 
 if check_for_symmetry('tacocat') != True:
-  print('check_for_symmetry failed on input "tacocat"')
+	print('check_for_symmetry failed on input "tacocat"')
 if check_for_symmetry('pinapple') != False:
 	print('check_for_symmetry failed on input "pinapple"')
 
