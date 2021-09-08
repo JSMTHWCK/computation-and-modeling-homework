@@ -1,14 +1,10 @@
 from code import*
 import math
 if decode(encode("word",3,7),3,7) != "word":
-	print('encode failed on input "word"')
+	print('encode or decode failed on input "word"')
 if decode(encode("pinapple",6,10),6,10) != "pinapple":
-	print('encode failed on input "pinapple"')
+	print('encode or decode on input "pinapple"')
 
-if decode([4,1,8,9],1,2) != [2,1,8,9]: #4,1,8,9 doesn't translate to anything
-	print('decode or encode failed on input "[4,1,8,9]"')
-if encode(decode([6,5,4,3,2],8,2),8,2) != [6,5,4,3,2]:
-	print('decode or encode failed on input "[6,5,4,3,2]"')
 
 bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751])
 
@@ -19,7 +15,7 @@ if math.isclose(math.sqrt(3), bisection_search(3,2,5), abs_tol = 0.00001) != Tru
 if math.isclose(10**(1./3.), bisection_search(10,3,9), abs_tol = 0.5) != True:
 	print('bisection_search failed on input "10**1/3"')
 
-n1 = stacks([1,2,3,4,5,6])
+n1 = Stacks([1,2,3,4,5,6])
 if n1.print() != "654321":
 	print("stack print failed on n1")
 if n1.push(8) != [1,2,3,4,5,6,8]:
@@ -27,7 +23,7 @@ if n1.push(8) != [1,2,3,4,5,6,8]:
 if n1.pop() != 8:
 	print("stack pop failed on n1")
 	
-n2 = queue([1,2,3,4,5,6])
+n2 = Queue([1,2,3,4,5,6])
 if n2.print() != "654321":
 	print("stack print failed on n1")
 if n2.enqueue(8) != [1,2,3,4,5,6,8]:
