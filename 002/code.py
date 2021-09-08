@@ -33,19 +33,21 @@ def bruteforce(numbers):
 			fin_answer = []
 			x = 0
 			for item in numbers:
-				decoded_number = (item - b) / a
+				decoded_number = (item - b)/a
 				if decoded_number.is_integer() == True and decoded_number >= 0 and decoded_number <=52:
 					fin_answer.append(decoded_number)
 					x +=1
 					if x == len(numbers):
 						for letter in fin_answer:
 							decoded_string += alphabet_w_cap[int(letter)]
-						return (decoded_string)
+						print(decoded_string)
 						
 				else:
 					x = 0
 					fin_answer = []
 
+	
+bruteforce([377, 717, 71, 513, 105, 921, 581, 547, 547, 105, 377, 717, 241, 71, 105, 547, 71,377, 547, 717, 751, 683, 785, 513, 241, 547, 751])
 	
 
 
