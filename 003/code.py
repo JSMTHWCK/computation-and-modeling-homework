@@ -1,19 +1,57 @@
-def swap_sort(numbers):
-	old_numbers = []
-	forever = 1
-	cashe_num = 0
-	while forever == 1:
-		print(old_numbers)
-		for item in range(0,len(numbers) - 1):
-			print(str(item) + " item")
-			print(numbers[item])
-			if numbers[item] > numbers[item + 1]:
-				numbers[item] = cashe_num
-				
-		if old_numbers == numbers:
-			return numbers
-			break
-		else:
-			old_numbers = numbers
+#couldn't get import to work
+def calc_minimum(numbers):
+	a = numbers[0]
+	for item in numbers:
+		if item < a:
+			a = item
+	return a
+def calc_maximum(numbers):
+	a = numbers[0]
+	for item in numbers:
+		if item > a:
+			a = item
+	return a
 
-print(swap_sort([1,3,5,6,7,3,2]))
+def swap_sort(numbers):
+	for a in range (0,len(numbers)):
+		for item in range(1,len(numbers) - 1):
+			if numbers[item] < numbers [item - 1]:
+				numbers[item],numbers[item-1] = numbers[item - 1], numbers[item]
+			else:
+				continue
+	return numbers
+
+def tallysort(numbers):
+
+	shift = calc_minimum(numbers)
+	tally_list = []
+	sorted_list = []
+
+	for item in range(0,len(numbers)):
+
+		numbers[item] = numbers[item] - shift
+
+	tally_length = calc_maximum(numbers)
+
+	for item in range(0,tally_length + 1):
+		
+		tally_list.append(0)
+
+	for item in numbers:
+
+		tally_list[item] += 1 
+
+	for item in range(0,tally_length +1):
+
+		x = [item] * tally_list[item]
+		sorted_list.extend(x)
+
+	for item in range(0,len(numbers)):
+
+		sorted_list[item] = sorted_list[item] + shift
+
+	return sorted_list
+
+print(swap_sort([13,7,25,2,105]))
+print(tallysort([13,7,25,2,105]))
+
