@@ -21,7 +21,7 @@ def swap_sort(numbers):
 				continue
 	return numbers
 
-def tallysort(numbers):
+def tally_sort(numbers):
 
 	shift = calc_minimum(numbers)
 	tally_list = []
@@ -52,6 +52,16 @@ def tallysort(numbers):
 
 	return sorted_list
 
-print(swap_sort([13,7,25,2,105]))
-print(tallysort([13,7,25,2,105]))
+def card_sort(numbers):
+	for n in numbers:
+		for item in range(0, len(numbers)):
+			if item > 0:
+				while numbers[item] < numbers[item - 1]:
+					numbers[item], numbers[item - 1] = numbers[item - 1], numbers[item]
+	return numbers
 
+	
+print(swap_sort([13,7,25,2,105]))
+print(tally_sort([13,7,25,2,105]))
+print(card_sort([13,7,25,2,105]))
+print("hi")
