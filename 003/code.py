@@ -61,7 +61,4 @@ def card_sort(numbers):
 	return numbers
 
 	
-print(swap_sort([13,7,25,2,105]))
-print(tally_sort([13,7,25,2,105]))
-print(card_sort([13,7,25,2,105]))
-print("hi")
+
