@@ -5,7 +5,9 @@ def calc_minimum(numbers):
 		if item < a:
 			a = item
 	return a
+
 def calc_maximum(numbers):
+
 	a = numbers[0]
 	for item in numbers:
 		if item > a:
@@ -13,10 +15,14 @@ def calc_maximum(numbers):
 	return a
 
 def swap_sort(numbers):
+
 	for a in range (0,len(numbers)):
+
 		for item in range(1,len(numbers) - 1):
+
 			if numbers[item] < numbers [item - 1]:
-				numbers[item],numbers[item-1] = numbers[item - 1], numbers[item]
+
+				numbers[item],numbers[item - 1] = numbers[item - 1],numbers[item]
 			else:
 				continue
 	return numbers
@@ -41,7 +47,7 @@ def tally_sort(numbers):
 
 		tally_list[item] += 1 
 
-	for item in range(0,tally_length +1):
+	for item in range(0,tally_length + 1):
 
 		x = [item] * tally_list[item]
 		sorted_list.extend(x)
@@ -53,6 +59,7 @@ def tally_sort(numbers):
 	return sorted_list
 
 def card_sort(numbers):
+
 	for n in numbers:
 		for item in range(0, len(numbers)):
 			if item > 0:
