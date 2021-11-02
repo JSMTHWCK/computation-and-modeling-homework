@@ -6,3 +6,6 @@ merge_sort(input list):
         return the result
     otherwise, if the input list consists of only one element, then it is already sorted,
         and you can just return it.
+
+
+helpers work fine

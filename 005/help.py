@@ -24,6 +24,6 @@ def split(input):
 	halfpoint = int(len(input)/2)
 	first_half = input[:halfpoint]
 	second_half = input[halfpoint:]
-	print(first_half)
-	print(second_half)
+	return first_half,second_half
 split([1,2,3,4,5,6,7,8])
+print(merge([1],[2]))

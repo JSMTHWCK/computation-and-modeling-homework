@@ -4,8 +4,11 @@ def merge_sort(input):
         firsthalf,secondhalf = split(input)
         sortfirst = merge_sort(firsthalf)
         sortsecond = merge_sort(secondhalf)
-
+        sortedfirst = merge_sort(firsthalf)
+        sortedsecond = merge_sort(secondhalf)
+        
+        return merge(sortedfirst, sortedsecond)
     else:
-        print(input)
+        return input
 
-print(merge_sort([1,2,3,4,5,6,7]))
+print(merge_sort([2,3,4,1,5,6,7]))
