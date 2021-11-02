@@ -1,4 +1,8 @@
 def merge(a,b):
+	if a == None:
+		return b
+	if b == None:
+		return a
 	andx = 0 
 	bndx = 0 
 	final_array = []
@@ -17,10 +21,9 @@ def merge(a,b):
 	return final_array
 
 def split(input):
-    first_half = []
-    last_half = []
-    for i in range(0,int(len(input)/2)):
-        first_half.append(input[i])
-    for item in range(i+1,len(input)):
-        last_half.append(input[item])
-    return first_half,last_half
+	halfpoint = int(len(input)/2)
+	first_half = input[:halfpoint]
+	second_half = input[halfpoint:]
+	print(first_half)
+	print(second_half)
+split([1,2,3,4,5,6,7,8])

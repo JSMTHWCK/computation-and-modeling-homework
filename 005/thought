@@ -1,0 +1,8 @@
+merge_sort(input list):
+    if the input list consists of more than one element:
+        break up the input list into its left and right halves
+        sort the left and right halves by recursively calling merge_sort
+        merge the two sorted halves
+        return the result
+    otherwise, if the input list consists of only one element, then it is already sorted,
+        and you can just return it.
