@@ -1,15 +1,19 @@
 from help import *
 def merge_sort(input):
+    print("input list is ", input)
     if len(input) > 1:
         firsthalf,secondhalf = split(input)
+        print("first half is ", firsthalf)
+        print("second half is ",secondhalf)
         sortfirst = merge_sort(firsthalf)
         sortsecond = merge_sort(secondhalf)
-        sortedfirst = merge_sort(firsthalf)
-        sortedsecond = merge_sort(secondhalf)
-        return merge(sortedfirst, sortedsecond)
+        print("sortfirst is ", sortfirst)
+        print("sortsecond is ", sortsecond)
+        print("merge between {} and {} is {} ".format(sortfirst,sortsecond,merge(sortfirst,sortsecond)))
+        return merge(sortfirst, sortsecond)
     else:
+        print("input is ", input)
         return input
 
-print(merge_sort([2,3,4,1,5,6,7]))
 a = [55,80,100,75,67,89,24,71,32,42]
 print(merge_sort(a))
