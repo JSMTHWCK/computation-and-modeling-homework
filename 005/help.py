@@ -27,7 +27,11 @@ def split(input):
 	second_half = input[halfpoint:]
 	return first_half,second_half
 
+<<<<<<< HEAD
 print(merge([2,3,4,5,6],[1,9,10,21,34]))
 print("hi")
 print("hi")
+=======
+print(merge([2,3,4,5,6],[1,9,10,34,21]))
+>>>>>>> e980bcfe5e918d7f81cd0894969facf2122bbd85
 print("hi")
